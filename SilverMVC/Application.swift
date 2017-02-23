@@ -19,7 +19,7 @@ class Application {
         window = context.makeWindow()
         
         let navigationView = context.makeNavigationView()
-        navigationView.presenter = Wireframe(navigationView: navigationView, context: context)
+        navigationView.presenter = RootWireframe(navigationView: navigationView, context: context)
         
         window.rootView = navigationView
         

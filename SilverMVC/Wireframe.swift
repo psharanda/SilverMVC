@@ -6,7 +6,7 @@
 import Foundation
 
 
-class Wireframe {
+class RootWireframe {
     unowned let navigationView: NavigationView
     let context: AppContext
     
