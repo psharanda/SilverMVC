@@ -28,10 +28,10 @@ class VIPERTests: XCTestCase {
         
         let context = TestContext(config: config)
         
-        let wireframe = Wireframe(context: context)
+        let application = Application(context: context)
         
-    
-        let mainView = wireframe.navigationView.views[0] as! TestMainView
+        let navigationView = application.window.rootView as! NavigationView
+        let mainView = navigationView.views[0] as! TestMainView
         mainView.loadClick.update()
         
         XCTAssertEqual(mainView.state.text, res)

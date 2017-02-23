@@ -8,12 +8,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var wireframe: Wireframe?
+    var app: Application?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        wireframe = Wireframe(context: ProductionContext())
+        app = Application(context: ProductionContext())
         
         return true
     }

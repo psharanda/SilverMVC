@@ -5,7 +5,6 @@
 
 import UIKit
 
-
 class ProductionContext: AppContext {
     
     //example of internal singleton

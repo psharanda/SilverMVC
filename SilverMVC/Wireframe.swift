@@ -5,24 +5,16 @@
 
 import Foundation
 
-typealias AppContext = TextLoaderContainer & MainViewContainer & NavigationControllerContainer & WindowContainer & DetailsViewContainer
 
 class Wireframe {
-    
-    let window: Window
-    let navigationView: NavigationView
+    unowned let navigationView: NavigationView
     let context: AppContext
     
-    init(context: AppContext) {
+    init(navigationView: NavigationView, context: AppContext) {
         self.context = context
-        
-        window = context.makeWindow()
-        
-        navigationView = context.makeNavigationView()
+        self.navigationView = navigationView
+               
         navigationView.views = [setupMainView()]
-        
-        window.rootView = navigationView
-        window.install()            
     }
     
     func setupMainView() -> MainViewProtocol {
