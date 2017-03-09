@@ -14,7 +14,7 @@ class ProductionContext: AppContext {
     }
     
     func makeMainView() -> MainViewProtocol {
-        return MainViewController()
+        return MainView()
     }
 
     func makeDetailsView(text: String) -> DetailsViewProtocol {

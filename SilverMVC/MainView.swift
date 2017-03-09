@@ -5,7 +5,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, MainViewProtocol {
+class MainView: UIViewController, MainViewProtocol {
     
     
     private lazy var button = UIButton(type: .system)
@@ -13,7 +13,7 @@ class MainViewController: UIViewController, MainViewProtocol {
     private lazy var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     
-    var state: MainViewState = MainViewState() {
+    var state: MainViewState = .initial {
         didSet {
             render(oldState: oldValue, newState: state)
         }
@@ -66,13 +66,21 @@ class MainViewController: UIViewController, MainViewProtocol {
     //MARK: -
     
     func render(oldState: MainViewState, newState: MainViewState) {
-        label.text = state.text
-        if state.loading {
-            activityIndicator.startAnimating()
-        } else {
+        
+        switch state {
+        case .initial:
+            label.text = nil
+            navigationItem.rightBarButtonItem?.isEnabled = false
             activityIndicator.stopAnimating()
+        case .loading:
+            label.text = nil
+             activityIndicator.startAnimating()
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        case .text(let text):
+            label.text = text
+            activityIndicator.stopAnimating()
+            navigationItem.rightBarButtonItem?.isEnabled = true
         }
-        navigationItem.rightBarButtonItem?.isEnabled = ((label.text?.characters.count) ?? 0) > 0
     }
 }
 

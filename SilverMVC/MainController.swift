@@ -22,9 +22,9 @@ class MainController {
         
         view.loadClick.subscribe {[unowned self] in
             
-            self.view.state = MainViewState(loading: true, text: nil)                        
+            self.view.state = .loading
             self.textLoader.loadText {
-                self.view.state = MainViewState(loading: false, text: $0)
+                self.view.state = .text($0)
             }
         }
     }

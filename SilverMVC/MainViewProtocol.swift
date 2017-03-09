@@ -9,9 +9,21 @@ protocol MainViewContainer {
     func makeMainView() -> MainViewProtocol
 }
 
-struct MainViewState {
-    var loading: Bool = false
-    var text: String? = nil
+enum MainViewState {
+    case initial
+    case loading
+    case text(String)
+    
+    var text: String? {
+        switch self {
+        case .initial:
+            return nil
+        case .loading:
+            return nil
+        case  .text(let t):
+            return t
+        }
+    }
 }
 
 protocol MainViewProtocol: View {
