@@ -8,12 +8,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var app: Application?
+    var window: Window?
+    
+    let context = ProductionContext()
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        app = Application(context: ProductionContext())
+        window = context.makeWindow()
+        window?.controller = WindowController(window: window!, context: context)
+        window?.install()
         
         return true
     }

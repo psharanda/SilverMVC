@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0865603D9C9AB5212704F533C1AF115A900A307D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B5219BAF2DA70724495960557F2F42BC2AF0C4A6" : 9223372036854775807,
+    "0865603D9C9AB5212704F533C1AF115A900A307D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "024AF1EB-62D2-4F53-924E-552C27CD4A24",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B5219BAF2DA70724495960557F2F42BC2AF0C4A6" : "vmc2\/",
+    "0865603D9C9AB5212704F533C1AF115A900A307D" : "SilverMVC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SilverMVC",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SilverMVC.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/psharanda\/SilverMVC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0865603D9C9AB5212704F533C1AF115A900A307D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/psharanda\/vmc2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B5219BAF2DA70724495960557F2F42BC2AF0C4A6"
+    }
+  ]
+}

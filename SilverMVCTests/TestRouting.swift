@@ -6,7 +6,7 @@
 import UIKit
 
 class TestView {
-    var presenter: AnyObject?
+    var controller: AnyObject?
 }
 
 class TestNavigationView: TestView, NavigationView {
@@ -25,7 +25,7 @@ class TestNavigationView: TestView, NavigationView {
     }
 }
 
-class TestWindow: Window {
+class TestWindow: TestView, Window {
     var rootView: View?
     func install() {
         

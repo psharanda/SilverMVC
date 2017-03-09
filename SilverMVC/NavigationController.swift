@@ -6,7 +6,8 @@
 import Foundation
 
 
-class RootWireframe {
+class NavigationController {
+    
     unowned let navigationView: NavigationView
     let context: AppContext
     
@@ -19,11 +20,11 @@ class RootWireframe {
     
     func setupMainView() -> MainViewProtocol {
         let view = context.makeMainView()
-        let presenter = MainPresenter(textLoader: context.makeTextLoader(), view: view)
-        view.presenter = presenter
+        let controller = MainController(textLoader: context.makeTextLoader(), view: view)
+        view.controller = controller
         
-        presenter.showDetails.subscribe {[unowned self, unowned presenter] in
-            let vc = self.context.makeDetailsView(text: presenter.view.state.text ?? "WTF?")
+        controller.showDetails.subscribe {[unowned self, unowned controller] in
+            let vc = self.context.makeDetailsView(text: controller.view.state.text ?? "WTF?")
             self.navigationView.pushView(view: vc, animated: true)
         }
         

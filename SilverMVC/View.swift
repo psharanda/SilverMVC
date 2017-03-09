@@ -6,7 +6,7 @@
 import Foundation
 
 protocol View: class {
-    var presenter: AnyObject? {get set}
+    var controller: AnyObject? {get set}
 }
 
 protocol NavigationView: View {
@@ -16,12 +16,12 @@ protocol NavigationView: View {
     var views: [View] {get set}
 }
 
-protocol Window: class {
+protocol Window: View {
     var rootView: View? {get set}
     func install()
 }
 
-protocol NavigationControllerContainer {
+protocol NavigationViewContainer {
     func makeNavigationView() -> NavigationView
 }
 

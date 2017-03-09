@@ -8,7 +8,7 @@
 
 import XCTest
 
-class VIPERTests: XCTestCase {
+class SilverMVCTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -28,9 +28,10 @@ class VIPERTests: XCTestCase {
         
         let context = TestContext(config: config)
         
-        let application = Application(context: context)
+        let window = context.makeWindow()
+        window.controller = WindowController(window: window, context: context)
         
-        let navigationView = application.window.rootView as! NavigationView
+        let navigationView = window.rootView as! NavigationView
         let mainView = navigationView.views[0] as! TestMainView
         mainView.loadClick.update()
         
