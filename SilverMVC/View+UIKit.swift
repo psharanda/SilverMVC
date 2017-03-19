@@ -20,10 +20,6 @@ extension Window where Self: UIWindow {
         }
     }
     
-    func install() {
-        makeKeyAndVisible()
-    }
-    
     var controller: AnyObject? {
         get {
             return objc_getAssociatedObject(self, &presenterKey) as AnyObject

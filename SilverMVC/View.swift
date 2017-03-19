@@ -18,7 +18,7 @@ protocol NavigationView: View {
 
 protocol Window: View {
     var rootView: View? {get set}
-    func install()
+    func makeKeyAndVisible()
 }
 
 protocol NavigationViewContainer {
