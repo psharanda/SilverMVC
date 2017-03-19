@@ -26,7 +26,7 @@ enum MainViewState {
     }
 }
 
-protocol MainViewProtocol: View {
+protocol MainViewProtocol: ViewProtocol {
     
     var loadClick: Signal<Void> {get}
     var detailsClick: Signal<Void> {get}

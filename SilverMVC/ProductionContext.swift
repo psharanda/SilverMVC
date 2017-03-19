@@ -21,11 +21,11 @@ class ProductionContext: AppContext {
         return DetailsViewController(text: text)
     }
 
-    func makeNavigationView() -> NavigationView {
+    func makeNavigationView() -> NavigationViewProtocol {
         return UINavigationController()
     }
     
-    func makeWindow() -> Window {
+    func makeWindow() -> WindowProtocol {
         return UIWindow(frame: UIScreen.main.bounds)
     }
 }

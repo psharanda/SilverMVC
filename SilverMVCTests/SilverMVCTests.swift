@@ -31,7 +31,7 @@ class SilverMVCTests: XCTestCase {
         let window = context.makeWindow()
         window.controller = WindowController(window: window, context: context)
         
-        let navigationView = window.rootView as! NavigationView
+        let navigationView = window.rootView as! NavigationViewProtocol
         let mainView = navigationView.views[0] as! TestMainView
         mainView.loadClick.update()
         

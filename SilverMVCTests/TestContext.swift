@@ -21,7 +21,7 @@ class TestMainView: TestView, MainViewProtocol {
     var loadClick = Signal<Void>()
     var detailsClick = Signal<Void>()
     
-    var state = MainViewState()
+    var state: MainViewState = .initial
     
     var viewController: UIViewController {
         fatalError()
@@ -59,11 +59,11 @@ class TestContext: AppContext {
         return TestMainView()
     }
     
-    func makeNavigationView() -> NavigationView {
+    func makeNavigationView() -> NavigationViewProtocol {
         return TestNavigationView()
     }
     
-    func makeWindow() -> Window {
+    func makeWindow() -> WindowProtocol {
         return TestWindow()
     }
     

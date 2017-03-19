@@ -8,10 +8,10 @@ import Foundation
 
 class NavigationController {
     
-    unowned let navigationView: NavigationView
+    unowned let navigationView: NavigationViewProtocol
     let context: AppContext
     
-    init(navigationView: NavigationView, context: AppContext) {
+    init(navigationView: NavigationViewProtocol, context: AppContext) {
         self.context = context
         self.navigationView = navigationView
                

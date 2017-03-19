@@ -9,25 +9,25 @@ class TestView {
     var controller: AnyObject?
 }
 
-class TestNavigationView: TestView, NavigationView {
-    func pushView(view: View, animated: Bool) {
+class TestNavigationView: TestView, NavigationViewProtocol {
+    func pushView(view: ViewProtocol, animated: Bool) {
         views.append(view)
     }
     
-    func popView(view: View, animated: Bool) -> View? {
+    func popView(view: ViewProtocol, animated: Bool) -> ViewProtocol? {
         return views.removeLast()
     }
     
-    var views: [View] = []
+    var views: [ViewProtocol] = []
     
     var viewController: UIViewController {
         fatalError()
     }
 }
 
-class TestWindow: TestView, Window {
-    var rootView: View?
-    func install() {
+class TestWindow: TestView, WindowProtocol {
+    var rootView: ViewProtocol?
+    func makeKeyAndVisible() {
         
     }
 }

@@ -8,6 +8,6 @@ protocol DetailsViewContainer {
     func makeDetailsView(text: String) -> DetailsViewProtocol
 }
 
-protocol DetailsViewProtocol: View {
+protocol DetailsViewProtocol: ViewProtocol {
     
 }

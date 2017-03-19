@@ -7,10 +7,10 @@ import Foundation
 
 class WindowController {
     
-    unowned let window: Window
+    unowned let window: WindowProtocol
     let context: AppContext
     
-    init(window: Window, context: AppContext) {
+    init(window: WindowProtocol, context: AppContext) {
         self.context = context
         self.window = window
         
