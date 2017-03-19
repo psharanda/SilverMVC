@@ -72,14 +72,17 @@ class MainView: UIViewController, MainViewProtocol {
             label.text = nil
             navigationItem.rightBarButtonItem?.isEnabled = false
             activityIndicator.stopAnimating()
+            button.isEnabled = true
         case .loading:
             label.text = nil
-             activityIndicator.startAnimating()
+            activityIndicator.startAnimating()
             navigationItem.rightBarButtonItem?.isEnabled = false
+            button.isEnabled = false
         case .text(let text):
             label.text = text
             activityIndicator.stopAnimating()
             navigationItem.rightBarButtonItem?.isEnabled = true
+            button.isEnabled = true
         }
     }
 }
