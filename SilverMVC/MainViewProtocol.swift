@@ -5,10 +5,6 @@
 
 import Foundation
 
-protocol MainViewContainer {
-    func makeMainView() -> MainViewProtocol
-}
-
 enum MainViewState {
     case initial
     case loading
@@ -32,6 +28,10 @@ protocol MainViewProtocol: ViewProtocol {
     var detailsClick: Signal<Void> {get}
     
     var state: MainViewState {get set}
+}
+
+protocol MainViewContainer {
+    func makeMainView() -> MainViewProtocol
 }
 
 
