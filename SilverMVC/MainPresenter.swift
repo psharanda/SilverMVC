@@ -5,7 +5,7 @@
 
 import Foundation
 
-class MainController {
+class MainPresenter {
     
     var showDetails = Signal<Void>()
     

@@ -20,7 +20,7 @@ class NavigationPresenter {
     
     func setupMainView() -> MainViewProtocol {
         let view = context.makeMainView()
-        let controller = MainController(textLoader: context.makeTextLoader(), view: view)
+        let controller = MainPresenter(textLoader: context.makeTextLoader(), view: view)
         view.controller = controller
         
         controller.showDetails.subscribe {[unowned self, unowned controller] in
