@@ -5,7 +5,7 @@
 
 import Foundation
 
-class WindowController {
+class WindowPresenter {
     
     unowned let window: WindowProtocol
     let context: AppContext
@@ -14,8 +14,11 @@ class WindowController {
         self.context = context
         self.window = window
         
+        
+        
+        
         let navigationView = context.makeNavigationView()
-        navigationView.controller = NavigationController(navigationView: navigationView, context: context)        
+        navigationView.controller = NavigationPresenter(navigationView: navigationView, context: context)        
         window.rootView = navigationView
     }
 }

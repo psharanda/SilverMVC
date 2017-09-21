@@ -6,7 +6,7 @@
 import Foundation
 
 
-class NavigationController {
+class NavigationPresenter {
     
     unowned let navigationView: NavigationViewProtocol
     let context: AppContext
