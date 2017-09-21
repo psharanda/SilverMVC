@@ -20,11 +20,11 @@ class NavigationPresenter {
     
     func setupMainView() -> MainViewProtocol {
         let view = context.makeMainView()
-        let controller = MainPresenter(textLoader: context.makeTextLoader(), view: view)
-        view.controller = controller
+        let presenter = MainPresenter(textLoader: context.makeTextLoader(), view: view)
+        view.presenter = presenter
         
-        controller.showDetails.subscribe {[unowned self, unowned controller] in
-            let vc = self.context.makeDetailsView(text: controller.view.state.text ?? "WTF?")
+        presenter.showDetails.subscribe {[unowned self, unowned presenter] in
+            let vc = self.context.makeDetailsView(text: presenter.view.state.text ?? "WTF?")
             self.navigationView.pushView(view: vc, animated: true)
         }
         

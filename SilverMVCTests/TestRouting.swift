@@ -6,7 +6,7 @@
 import UIKit
 
 class TestView {
-    var controller: AnyObject?
+    var presenter: AnyObject?
 }
 
 class TestNavigationView: TestView, NavigationViewProtocol {

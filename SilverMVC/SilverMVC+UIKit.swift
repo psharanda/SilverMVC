@@ -5,17 +5,17 @@
 
 import UIKit
 
-private var controllerKey: Int = 0
+private var presenterKey: Int = 0
 
 extension UIViewController: ViewProtocol {
     
-    var controller: AnyObject? {
+    var presenter: AnyObject? {
         get {
-            return objc_getAssociatedObject(self, &controllerKey) as AnyObject
+            return objc_getAssociatedObject(self, &presenterKey) as AnyObject
         }
         
         set {
-            objc_setAssociatedObject(self, &controllerKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &presenterKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }
@@ -31,13 +31,13 @@ extension UIWindow: WindowProtocol {
         }
     }
     
-    var controller: AnyObject? {
+    var presenter: AnyObject? {
         get {
-            return objc_getAssociatedObject(self, &controllerKey) as AnyObject
+            return objc_getAssociatedObject(self, &presenterKey) as AnyObject
         }
         
         set {
-            objc_setAssociatedObject(self, &controllerKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &presenterKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }

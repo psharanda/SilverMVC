@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window.controller = WindowPresenter(window: window, context: context)
+        window.presenter = WindowPresenter(window: window, context: context)
         window.makeKeyAndVisible()
         
         return true

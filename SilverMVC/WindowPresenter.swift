@@ -18,7 +18,7 @@ class WindowPresenter {
         
         
         let navigationView = context.makeNavigationView()
-        navigationView.controller = NavigationPresenter(navigationView: navigationView, context: context)        
+        navigationView.presenter = NavigationPresenter(navigationView: navigationView, context: context)        
         window.rootView = navigationView
     }
 }

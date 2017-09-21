@@ -6,7 +6,7 @@
 import Foundation
 
 protocol ViewProtocol: class {
-    var controller: AnyObject? {get set}
+    var presenter: AnyObject? {get set}
 }
 
 
