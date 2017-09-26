@@ -56,11 +56,11 @@ class MainView: UIViewController, MainViewProtocol {
     //MARK: 
     
     @objc private func detailsClicked() {
-        detailsClick.update()
+        detailsClick.update(())
     }
     
     @objc private func buttonClicked() {
-        loadClick.update()
+        loadClick.update(())
     }
     
     //MARK: -

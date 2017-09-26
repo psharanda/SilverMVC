@@ -17,7 +17,7 @@ class MainPresenter {
         self.view = view
         
         view.detailsClick.subscribe {[unowned self] in
-            self.showDetails.update()
+            self.showDetails.update(())
         }
         
         view.loadClick.subscribe {[unowned self] in
