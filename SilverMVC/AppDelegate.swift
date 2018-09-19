@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let context = ProductionContext()
     private lazy var window: WindowProtocol = self.context.makeWindow()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window.presenter = WindowPresenter(window: window, context: context)
         window.makeKeyAndVisible()

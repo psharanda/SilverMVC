@@ -10,7 +10,7 @@ class MainView: UIViewController, MainViewProtocol {
     
     private lazy var button = UIButton(type: .system)
     private lazy var label = UILabel()
-    private lazy var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    private lazy var activityIndicator = UIActivityIndicatorView(style: .gray)
     
     
     var state: MainViewState = .initial {
@@ -49,7 +49,7 @@ class MainView: UIViewController, MainViewProtocol {
         super.viewDidLayoutSubviews()
         
         activityIndicator.frame = view.bounds
-        label.frame = UIEdgeInsetsInsetRect(view.bounds, UIEdgeInsets(top: 80, left: 20, bottom: 80, right: 20))
+        label.frame = view.bounds.inset(by: UIEdgeInsets(top: 80, left: 20, bottom: 80, right: 20))
         button.frame = CGRect(x: 20, y: view.bounds.height - 60, width: view.bounds.width - 40, height: 40)
     }
     

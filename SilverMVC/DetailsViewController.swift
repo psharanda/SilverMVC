@@ -37,7 +37,7 @@ class DetailsViewController: UIViewController, DetailsViewProtocol {
         super.viewDidLayoutSubviews()
         
         
-        label.frame = UIEdgeInsetsInsetRect(view.bounds, UIEdgeInsets(top: 80, left: 20, bottom: 80, right: 20))
+        label.frame = view.bounds.inset(by: UIEdgeInsets(top: 80, left: 20, bottom: 80, right: 20))
         
     }
 }

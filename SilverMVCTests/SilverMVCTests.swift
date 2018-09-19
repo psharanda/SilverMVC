@@ -33,7 +33,7 @@ class SilverMVCTests: XCTestCase {
         
         let navigationView = window.rootView as! NavigationViewProtocol
         let mainView = navigationView.views[0] as! TestMainView
-        mainView.loadClick.update()
+        mainView.loadClick.update(())
         
         XCTAssertEqual(mainView.state.text, res)
     }
